@@ -1,0 +1,527 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1280.0" style="-fx-border-color: #4297A0; -fx-border-width: 7;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.nulp.loanproviderproject.SearchLoanController">
+   <children>
+      <BorderPane layoutX="24.0" layoutY="26.0" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <top>
+            <AnchorPane prefHeight="130.0" prefWidth="200.0" style="-fx-background-color: WHITE;" BorderPane.alignment="CENTER">
+               <children>
+                  <Pane layoutX="53.0" layoutY="20.0" prefHeight="80.0" prefWidth="200.0" style="-fx-background-color: #4297A0;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <children>
+                        <ImageView fx:id="Close" fitHeight="40.0" fitWidth="30.0" layoutX="1222.0" layoutY="25.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@close-icon-white.png" />
+                           </image>
+                        </ImageView>
+                     </children></Pane>
+                  <Label fx:id="Menu" layoutX="15.0" layoutY="86.0" prefHeight="33.0" prefWidth="121.0" text="MENU" textFill="#bcbcbc">
+                     <graphic>
+                        <ImageView fitHeight="22.0" fitWidth="22.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@menu-icon-image-light-grey.jpg" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <font>
+                        <Font name="System Bold" size="24.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="MenuClose" layoutX="15.0" layoutY="86.0" prefHeight="33.0" prefWidth="121.0" text="MENU" textFill="#bcbcbc">
+                     <graphic>
+                        <ImageView fitHeight="22.0" fitWidth="22.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@menu-icon-image-light-grey.jpg" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <font>
+                        <Font name="System Bold" size="24.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+         </top>
+         <left>
+            <AnchorPane fx:id="slider" prefHeight="300.0" prefWidth="330.0" style="-fx-background-color: #4297A0;" BorderPane.alignment="CENTER">
+               <children>
+                  <VBox layoutX="23.0" layoutY="30.0" prefHeight="200.0" prefWidth="100.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="53.0">
+                     <children>
+                        <Button fx:id="ShowButton" alignment="BASELINE_CENTER" mnemonicParsing="false" onAction="#switchToShowScene" prefHeight="80.0" prefWidth="409.0" style="-fx-background-color: transparent;" text="Show" textFill="WHITE">
+                           <graphic>
+                              <ImageView fx:id="ShowButtonImage" fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@show-icon-white.png" />
+                                 </image></ImageView>
+                           </graphic>
+                           <font>
+                              <Font size="36.0" />
+                           </font>
+                           <VBox.margin>
+                              <Insets bottom="25.0" />
+                           </VBox.margin>
+                        </Button>
+                        <Button fx:id="SearchButton" alignment="BASELINE_CENTER" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#switchToSearchScene" prefHeight="80.0" prefWidth="409.0" style="-fx-background-color: transparent;" text="Search" textFill="WHITE">
+                           <graphic>
+                              <ImageView fx:id="SearchButtonImage" fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@search-icon-white.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                           <font>
+                              <Font size="36.0" />
+                           </font>
+                           <VBox.margin>
+                              <Insets bottom="25.0" />
+                           </VBox.margin>
+                        </Button>
+                        <Button fx:id="AddButton" alignment="BASELINE_CENTER" layoutX="10.0" layoutY="220.0" mnemonicParsing="false" onAction="#switchToAddScene" prefHeight="80.0" prefWidth="409.0" style="-fx-background-color: transparent;" text="Add" textFill="WHITE">
+                           <graphic>
+                              <ImageView fx:id="SelectButtonImage1" fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@add-icon-white.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                           <font>
+                              <Font size="36.0" />
+                           </font>
+                           <VBox.margin>
+                              <Insets bottom="25.0" />
+                           </VBox.margin>
+                        </Button>
+                        <Button fx:id="DeleteButton" alignment="BASELINE_CENTER" layoutX="10.0" layoutY="325.0" mnemonicParsing="false" onAction="#switchToDeleteScene" prefHeight="80.0" prefWidth="409.0" style="-fx-background-color: transparent;" text="Delete" textFill="WHITE">
+                           <graphic>
+                              <ImageView fx:id="SelectButtonImage11" fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@delete-icon-white.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                           <font>
+                              <Font size="36.0" />
+                           </font>
+                           <VBox.margin>
+                              <Insets bottom="25.0" />
+                           </VBox.margin>
+                        </Button>
+                     </children>
+                  </VBox>
+               </children>
+            </AnchorPane>
+         </left>
+         <center>
+            <ScrollPane prefHeight="200.0" prefWidth="500.0" BorderPane.alignment="CENTER">
+              <content>
+                <AnchorPane prefHeight="1500.0" prefWidth="935.0">
+                     <children>
+                        <Label text="Search loan">
+                           <font>
+                              <Font size="36.0" />
+                           </font>
+                           <padding>
+                              <Insets bottom="25.0" />
+                           </padding>
+                        </Label>
+                        <VBox alignment="TOP_RIGHT" prefHeight="600.0" prefWidth="668.0" AnchorPane.topAnchor="0.0">
+                           <children>
+                              <HBox alignment="TOP_RIGHT" minWidth="-Infinity" prefHeight="44.0" prefWidth="300.0">
+                                 <children>
+                                    <Label text="Bank">
+                                       <HBox.margin>
+                                          <Insets right="50.0" />
+                                       </HBox.margin>
+                                       <font>
+                                          <Font size="24.0" />
+                                       </font>
+                                    </Label>
+                                    <TextField fx:id="bankField" prefHeight="30.0" prefWidth="250.0">
+                                       <font>
+                                          <Font size="18.0" />
+                                       </font>
+                                    </TextField>
+                                 </children>
+                                 <VBox.margin>
+                                    <Insets bottom="15.0" />
+                                 </VBox.margin>
+                              </HBox>
+                              <HBox alignment="TOP_RIGHT" layoutX="10.0" layoutY="10.0" minWidth="-Infinity" prefHeight="47.0" prefWidth="475.0">
+                                 <children>
+                                    <Label text="Purpose">
+                                       <HBox.margin>
+                                          <Insets right="50.0" />
+                                       </HBox.margin>
+                                       <font>
+                                          <Font size="24.0" />
+                                       </font>
+                                    </Label>
+                                    <ChoiceBox fx:id="purposeBox" prefWidth="150.0">
+                                       <HBox.margin>
+                                          <Insets right="100.0" />
+                                       </HBox.margin>
+                                    </ChoiceBox>
+                                 </children>
+                                 <VBox.margin>
+                                    <Insets bottom="15.0" />
+                                 </VBox.margin>
+                              </HBox>
+                              <HBox alignment="TOP_RIGHT" layoutX="10.0" layoutY="57.0" minWidth="-Infinity" prefHeight="47.0" prefWidth="475.0">
+                                 <children>
+                                    <Label text="Number Of Years">
+                                       <HBox.margin>
+                                          <Insets right="50.0" />
+                                       </HBox.margin>
+                                       <font>
+                                          <Font size="24.0" />
+                                       </font>
+                                    </Label>
+                                    <TextField fx:id="numOfYearsField" prefHeight="30.0" prefWidth="250.0">
+                                       <font>
+                                          <Font size="18.0" />
+                                       </font>
+                                    </TextField>
+                                 </children>
+                                 <VBox.margin>
+                                    <Insets bottom="15.0" />
+                                 </VBox.margin>
+                              </HBox>
+                              <HBox alignment="TOP_RIGHT" layoutX="10.0" layoutY="104.0" minWidth="-Infinity" prefHeight="47.0" prefWidth="475.0">
+                                 <children>
+                                    <Label text="Annual Interest Rate">
+                                       <HBox.margin>
+                                          <Insets right="50.0" />
+                                       </HBox.margin>
+                                       <font>
+                                          <Font size="24.0" />
+                                       </font>
+                                    </Label>
+                                    <TextField fx:id="annualInterestRateField" prefHeight="30.0" prefWidth="250.0">
+                                       <font>
+                                          <Font size="18.0" />
+                                       </font>
+                                    </TextField>
+                                 </children>
+                                 <VBox.margin>
+                                    <Insets bottom="15.0" />
+                                 </VBox.margin>
+                              </HBox>
+                              <HBox alignment="TOP_RIGHT" layoutX="10.0" layoutY="151.0" minWidth="-Infinity" prefHeight="47.0" prefWidth="475.0">
+                                 <children>
+                                    <Label text="Amount">
+                                       <HBox.margin>
+                                          <Insets right="50.0" />
+                                       </HBox.margin>
+                                       <font>
+                                          <Font size="24.0" />
+                                       </font>
+                                    </Label>
+                                    <TextField fx:id="amountField" prefHeight="30.0" prefWidth="250.0">
+                                       <font>
+                                          <Font size="18.0" />
+                                       </font>
+                                    </TextField>
+                                 </children>
+                                 <VBox.margin>
+                                    <Insets bottom="15.0" />
+                                 </VBox.margin>
+                              </HBox>
+                              <HBox alignment="TOP_RIGHT" layoutX="10.0" layoutY="198.0" minWidth="-Infinity" prefHeight="47.0" prefWidth="475.0">
+                                 <children>
+                                    <Label text="Early Payment Available">
+                                       <HBox.margin>
+                                          <Insets right="50.0" />
+                                       </HBox.margin>
+                                       <font>
+                                          <Font size="24.0" />
+                                       </font>
+                                    </Label>
+                                    <ChoiceBox fx:id="earlyPaymentBox" prefWidth="150.0">
+                                       <HBox.margin>
+                                          <Insets right="100.0" />
+                                       </HBox.margin>
+                                    </ChoiceBox>
+                                 </children>
+                                 <VBox.margin>
+                                    <Insets bottom="15.0" />
+                                 </VBox.margin>
+                              </HBox>
+                              <HBox alignment="TOP_RIGHT" layoutX="10.0" layoutY="245.0" minWidth="-Infinity" prefHeight="47.0" prefWidth="475.0">
+                                 <children>
+                                    <Label text="Expand Limit Available">
+                                       <HBox.margin>
+                                          <Insets right="50.0" />
+                                       </HBox.margin>
+                                       <font>
+                                          <Font size="24.0" />
+                                       </font>
+                                    </Label>
+                                    <ChoiceBox fx:id="expandLimitBox" prefWidth="150.0">
+                                       <HBox.margin>
+                                          <Insets right="100.0" />
+                                       </HBox.margin>
+                                    </ChoiceBox>
+                                 </children>
+                              </HBox>
+                              <Button fx:id="resetButton" mnemonicParsing="false" onAction="#reset" prefHeight="39.0" prefWidth="150.0" text="Reset">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                                 <VBox.margin>
+                                    <Insets bottom="30.0" right="100.0" top="30.0" />
+                                 </VBox.margin>
+                              </Button>
+                              <Label fx:id="succsessfulSearchLabel">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                           <padding>
+                              <Insets bottom="15.0" top="100.0" />
+                           </padding>
+                        </VBox>
+                        <TableView fx:id="searchTable" editable="true" layoutY="597.0" prefHeight="250.0" prefWidth="950.0">
+                           <columns>
+                              <TableColumn fx:id="idColumn" prefWidth="75.0" text="LoanID" />
+                              <TableColumn fx:id="bankColumn" prefWidth="75.0" text="Bank" />
+                              <TableColumn fx:id="purposeColumn" prefWidth="75.0" text="Purpose" />
+                              <TableColumn fx:id="numberOfYearsColumn" prefWidth="118.0" text="NumberOfYears" />
+                              <TableColumn fx:id="annualInterestRateColumn" prefWidth="135.0" text="AnnualInterestRate" />
+                              <TableColumn fx:id="amountColumn" prefWidth="67.0" text="Amount" />
+                              <TableColumn fx:id="earlyPaymentAvailableColumn" prefWidth="151.0" text="EarlyPaymentAvailable" />
+                              <TableColumn fx:id="expandLimitAvailableColumn" prefWidth="140.0" text="ExpandLimitAvailable" />
+                           </columns>
+                        </TableView>
+                        <VBox fx:id="infoVBox" layoutX="416.0" layoutY="768.0" prefHeight="588.0" prefWidth="578.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0">
+                           <children>
+                              <Label text="Loan Info">
+                                 <font>
+                                    <Font size="24.0" />
+                                 </font>
+                                 <VBox.margin>
+                                    <Insets bottom="20.0" left="50.0" />
+                                 </VBox.margin>
+                              </Label>
+                              <HBox alignment="TOP_RIGHT" minWidth="-Infinity" prefHeight="44.0" prefWidth="300.0">
+                                 <children>
+                                    <Label text="Bank">
+                                       <HBox.margin>
+                                          <Insets right="50.0" />
+                                       </HBox.margin>
+                                       <font>
+                                          <Font size="24.0" />
+                                       </font>
+                                    </Label>
+                                    <Label fx:id="infoBank" prefHeight="30.0" prefWidth="250.0" text="Label">
+                                       <font>
+                                          <Font size="18.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </HBox>
+                              <HBox alignment="TOP_RIGHT" minWidth="-Infinity" prefHeight="47.0" prefWidth="475.0">
+                                 <children>
+                                    <Label text="Purpose">
+                                       <HBox.margin>
+                                          <Insets right="50.0" />
+                                       </HBox.margin>
+                                       <font>
+                                          <Font size="24.0" />
+                                       </font>
+                                    </Label>
+                                    <Label fx:id="infoPurpose" prefHeight="30.0" prefWidth="250.0" text="Label">
+                                       <font>
+                                          <Font size="18.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </HBox>
+                              <HBox alignment="TOP_RIGHT" minWidth="-Infinity" prefHeight="47.0" prefWidth="475.0">
+                                 <children>
+                                    <Label text="Number Of Years">
+                                       <HBox.margin>
+                                          <Insets right="50.0" />
+                                       </HBox.margin>
+                                       <font>
+                                          <Font size="24.0" />
+                                       </font>
+                                    </Label>
+                                    <Label fx:id="infoNumOfYears" prefHeight="30.0" prefWidth="250.0" text="Label">
+                                       <font>
+                                          <Font size="18.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </HBox>
+                              <HBox alignment="TOP_RIGHT" minWidth="-Infinity" prefHeight="47.0" prefWidth="475.0">
+                                 <children>
+                                    <Label text="Annual Interest Rate">
+                                       <HBox.margin>
+                                          <Insets right="50.0" />
+                                       </HBox.margin>
+                                       <font>
+                                          <Font size="24.0" />
+                                       </font>
+                                    </Label>
+                                    <Label fx:id="infoAnnualInterestRate" prefHeight="30.0" prefWidth="250.0" text="Label">
+                                       <font>
+                                          <Font size="18.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </HBox>
+                              <HBox alignment="TOP_RIGHT" minWidth="-Infinity" prefHeight="47.0" prefWidth="475.0">
+                                 <children>
+                                    <Label text="Amount">
+                                       <HBox.margin>
+                                          <Insets right="50.0" />
+                                       </HBox.margin>
+                                       <font>
+                                          <Font size="24.0" />
+                                       </font>
+                                    </Label>
+                                    <Label fx:id="infoAmount" prefHeight="30.0" prefWidth="250.0" text="Label">
+                                       <font>
+                                          <Font size="18.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </HBox>
+                              <HBox alignment="TOP_RIGHT" minWidth="-Infinity" prefHeight="47.0" prefWidth="475.0">
+                                 <children>
+                                    <Label text="Early Payment Available">
+                                       <HBox.margin>
+                                          <Insets right="50.0" />
+                                       </HBox.margin>
+                                       <font>
+                                          <Font size="24.0" />
+                                       </font>
+                                    </Label>
+                                    <Label fx:id="infoEarlyPayment" prefHeight="30.0" prefWidth="250.0" text="Label">
+                                       <font>
+                                          <Font size="18.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </HBox>
+                              <HBox alignment="TOP_RIGHT" minWidth="-Infinity" prefHeight="47.0" prefWidth="475.0">
+                                 <children>
+                                    <Label text="Expand Limit Available">
+                                       <HBox.margin>
+                                          <Insets right="50.0" />
+                                       </HBox.margin>
+                                       <font>
+                                          <Font size="24.0" />
+                                       </font>
+                                    </Label>
+                                    <Label fx:id="infoExpandLimit" prefHeight="30.0" prefWidth="250.0" text="Label">
+                                       <font>
+                                          <Font size="18.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </HBox>
+                              <HBox alignment="TOP_RIGHT" layoutX="10.0" layoutY="324.0" minWidth="-Infinity" prefHeight="47.0" prefWidth="475.0">
+                                 <children>
+                                    <Label text="Monthly Payment">
+                                       <HBox.margin>
+                                          <Insets right="50.0" />
+                                       </HBox.margin>
+                                       <font>
+                                          <Font size="24.0" />
+                                       </font>
+                                    </Label>
+                                    <Label fx:id="infoMonthlyPayment" prefHeight="30.0" prefWidth="250.0" text="Label">
+                                       <font>
+                                          <Font size="18.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </HBox>
+                              <HBox alignment="TOP_RIGHT" layoutX="10.0" layoutY="371.0" minWidth="-Infinity" prefHeight="47.0" prefWidth="475.0">
+                                 <children>
+                                    <Label text="Total Payment">
+                                       <HBox.margin>
+                                          <Insets right="50.0" />
+                                       </HBox.margin>
+                                       <font>
+                                          <Font size="24.0" />
+                                       </font>
+                                    </Label>
+                                    <Label fx:id="infoTotalPayment" prefHeight="30.0" prefWidth="250.0" text="Label">
+                                       <font>
+                                          <Font size="18.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </HBox>
+                              <HBox alignment="TOP_RIGHT" layoutX="10.0" layoutY="418.0" minWidth="-Infinity" prefHeight="47.0" prefWidth="475.0">
+                                 <children>
+                                    <Label fx:id="infoTotalEarlyPaymentLabel" text="Total Early Payment">
+                                       <HBox.margin>
+                                          <Insets right="50.0" />
+                                       </HBox.margin>
+                                       <font>
+                                          <Font size="24.0" />
+                                       </font>
+                                    </Label>
+                                    <Label fx:id="infoTotalEarlyPayment" prefHeight="30.0" prefWidth="250.0" text="Label">
+                                       <font>
+                                          <Font size="18.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </HBox>
+                              <HBox fx:id="infoSetNumOfYearsHBox" alignment="TOP_RIGHT" layoutX="10.0" layoutY="465.0" minWidth="-Infinity" prefHeight="47.0" prefWidth="475.0">
+                                 <children>
+                                    <Label fx:id="infoSetNumOfYearsLabel" text="Set Number Of Years">
+                                       <HBox.margin>
+                                          <Insets right="50.0" />
+                                       </HBox.margin>
+                                       <font>
+                                          <Font size="24.0" />
+                                       </font>
+                                    </Label>
+                                    <TextField fx:id="infoSetNumOfYears" prefHeight="30.0" prefWidth="250.0" />
+                                 </children>
+                              </HBox>
+                              <HBox fx:id="infoSetLoanLimitHBox" alignment="TOP_RIGHT" layoutX="10.0" layoutY="512.0" minWidth="-Infinity" prefHeight="47.0" prefWidth="475.0">
+                                 <children>
+                                    <Label fx:id="infoSetLoanLimitLabel" text="Set Loan Limit">
+                                       <HBox.margin>
+                                          <Insets right="50.0" />
+                                       </HBox.margin>
+                                       <font>
+                                          <Font size="24.0" />
+                                       </font>
+                                    </Label>
+                                    <TextField fx:id="infoSetLoanLimit" prefHeight="30.0" prefWidth="250.0" />
+                                 </children>
+                              </HBox>
+                           </children>
+                        </VBox>
+                     </children>
+                  </AnchorPane>
+              </content>
+            </ScrollPane>
+         </center>
+      </BorderPane>
+   </children>
+</AnchorPane>

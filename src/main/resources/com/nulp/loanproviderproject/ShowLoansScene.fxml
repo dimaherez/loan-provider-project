@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1280.0" style="-fx-border-color: #4297A0; -fx-border-width: 7;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.nulp.loanproviderproject.ShowLoansController">
+   <children>
+      <BorderPane layoutX="24.0" layoutY="26.0" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <top>
+            <AnchorPane prefHeight="130.0" prefWidth="200.0" style="-fx-background-color: WHITE;" BorderPane.alignment="CENTER">
+               <children>
+                  <Pane layoutX="53.0" layoutY="20.0" prefHeight="80.0" prefWidth="200.0" style="-fx-background-color: #4297A0;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <children>
+                        <ImageView fx:id="Close" fitHeight="40.0" fitWidth="30.0" layoutX="1222.0" layoutY="25.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@close-icon-white.png" />
+                           </image>
+                        </ImageView>
+                     </children></Pane>
+                  <Label fx:id="Menu" layoutX="15.0" layoutY="86.0" prefHeight="33.0" prefWidth="121.0" text="MENU" textFill="#bcbcbc">
+                     <graphic>
+                        <ImageView fitHeight="22.0" fitWidth="22.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@menu-icon-image-light-grey.jpg" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <font>
+                        <Font name="System Bold" size="24.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="MenuClose" layoutX="15.0" layoutY="86.0" prefHeight="33.0" prefWidth="121.0" text="MENU" textFill="#bcbcbc">
+                     <graphic>
+                        <ImageView fitHeight="22.0" fitWidth="22.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@menu-icon-image-light-grey.jpg" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <font>
+                        <Font name="System Bold" size="24.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+         </top>
+         <left>
+            <AnchorPane fx:id="slider" prefHeight="300.0" prefWidth="330.0" style="-fx-background-color: #4297A0;" BorderPane.alignment="CENTER">
+               <children>
+                  <VBox layoutX="23.0" layoutY="30.0" prefHeight="200.0" prefWidth="100.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="53.0">
+                     <children>
+                        <Button fx:id="ShowButton" alignment="BASELINE_CENTER" mnemonicParsing="false" onAction="#switchToShowScene" prefHeight="80.0" prefWidth="409.0" style="-fx-background-color: transparent;" text="Show" textFill="WHITE">
+                           <graphic>
+                              <ImageView fx:id="ShowButtonImage" fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@show-icon-white.png" />
+                                 </image></ImageView>
+                           </graphic>
+                           <font>
+                              <Font size="36.0" />
+                           </font>
+                           <VBox.margin>
+                              <Insets bottom="25.0" />
+                           </VBox.margin>
+                        </Button>
+                        <Button fx:id="SearchButton" alignment="BASELINE_CENTER" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#switchToSearchScene" prefHeight="80.0" prefWidth="409.0" style="-fx-background-color: transparent;" text="Search" textFill="WHITE">
+                           <graphic>
+                              <ImageView fx:id="SearchButtonImage" fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@search-icon-white.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                           <font>
+                              <Font size="36.0" />
+                           </font>
+                           <VBox.margin>
+                              <Insets bottom="25.0" />
+                           </VBox.margin>
+                        </Button>
+                        <Button fx:id="AddButton" alignment="BASELINE_CENTER" layoutX="10.0" layoutY="220.0" mnemonicParsing="false" onAction="#switchToAddScene" prefHeight="80.0" prefWidth="409.0" style="-fx-background-color: transparent;" text="Add" textFill="WHITE">
+                           <graphic>
+                              <ImageView fx:id="SelectButtonImage1" fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@add-icon-white.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                           <font>
+                              <Font size="36.0" />
+                           </font>
+                           <VBox.margin>
+                              <Insets bottom="25.0" />
+                           </VBox.margin>
+                        </Button>
+                        <Button fx:id="DeleteButton" alignment="BASELINE_CENTER" layoutX="10.0" layoutY="325.0" mnemonicParsing="false" onAction="#switchToDeleteScene" prefHeight="80.0" prefWidth="409.0" style="-fx-background-color: transparent;" text="Delete" textFill="WHITE">
+                           <graphic>
+                              <ImageView fx:id="SelectButtonImage11" fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@delete-icon-white.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                           <font>
+                              <Font size="36.0" />
+                           </font>
+                           <VBox.margin>
+                              <Insets bottom="25.0" />
+                           </VBox.margin>
+                        </Button>
+                     </children>
+                  </VBox>
+               </children>
+            </AnchorPane>
+         </left>
+         <center>
+            <VBox fx:id="VBoxTable" prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER">
+               <children>
+                  <TableView fx:id="tableOfLoans" editable="true" prefHeight="694.0" prefWidth="950.0">
+                     <columns>
+                        <TableColumn fx:id="idColumn" prefWidth="75.0" text="LoanID" />
+                        <TableColumn fx:id="bankColumn" prefWidth="75.0" text="Bank" />
+                        <TableColumn fx:id="purposeColumn" prefWidth="75.0" text="Purpose" />
+                        <TableColumn fx:id="numberOfYearsColumn" prefWidth="118.0" text="NumberOfYears" />
+                        <TableColumn fx:id="annualInterestRateColumn" prefWidth="135.0" text="AnnualInterestRate" />
+                        <TableColumn fx:id="amountColumn" prefWidth="67.0" text="Amount" />
+                        <TableColumn fx:id="earlyPaymentAvailableColumn" prefWidth="151.0" text="EarlyPaymentAvailable" />
+                        <TableColumn fx:id="expandLimitAvailableColumn" prefWidth="140.0" text="ExpandLimitAvailable" />
+                     </columns></TableView>
+               </children>
+            </VBox>
+         </center>
+      </BorderPane>
+   </children>
+</AnchorPane>
